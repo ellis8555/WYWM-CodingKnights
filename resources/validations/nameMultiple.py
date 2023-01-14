@@ -1,5 +1,5 @@
 import re
-from resources.userInput.nameInput import nameInput
+from ..userInput import nameInput
 
 
 def nameMultiple():

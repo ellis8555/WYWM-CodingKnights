@@ -1,1 +1,0 @@
-from resources.validations.nameMultiple import nameMultiple

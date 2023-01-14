@@ -1,3 +1,4 @@
-import resources.__init__ as init
+from resources import nameMultiple
 
-init.nameMultiple()
+print('inside of main')
+nameMultiple.nameMultiple()

@@ -7,6 +7,7 @@ class Knight:
 #####################
 
     __name: str
+    __id: int
 
 #####################
 # constructor
@@ -14,13 +15,19 @@ class Knight:
 
     def __init__(self, name):
         self.__name = name
+        self.__id = id(self)
 
 #####################
 # getters
 #####################
 
+# name of knight
     def get_name(self):
         return self.__name
+
+# id of knight
+    def get_id(self):
+        return self.__id
 
 #####################
 # setters

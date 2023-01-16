@@ -1,1 +1,1 @@
-from . import createKnight
+from . import searchForDuplicates

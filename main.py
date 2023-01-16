@@ -1,5 +1,3 @@
-from resources import getMultipleName, knight
+from resources import app
 
-print('inside of main')
-
-Ellis = knight.Knight("Ellis")
+app.run()

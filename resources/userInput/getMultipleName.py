@@ -13,7 +13,7 @@ def getNameMultiple():
     pattern = re.compile(searchPattern)
     isValidName = bool(re.search(pattern, name))
     if isValidName:
-        print(name)
+        return name
     else:
         print("Three names max. Single '.' and '-' can be used as well.")
         getNameMultiple()

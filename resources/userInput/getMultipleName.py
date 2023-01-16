@@ -16,5 +16,5 @@ def nameMultiple():
     if isValidName:
         print(name)
     else:
-        print("Only use letters, a dot, hyphen and keep it real!")
+        print("Three names max. Single '.' and '-' can be used as well.")
         nameMultiple()

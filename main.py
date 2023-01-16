@@ -1,4 +1,5 @@
-from resources import getMultipleName
+from resources import getMultipleName, knight
 
 print('inside of main')
-getMultipleName.getNameMultiple()
+
+Ellis = knight.Knight("Ellis")

@@ -1,4 +1,4 @@
-from resources import nameMultiple
+from resources import getMultipleName
 
 print('inside of main')
-nameMultiple.nameMultiple()
+getMultipleName.nameMultiple()

@@ -1,1 +1,1 @@
-from .nameInput import nameInput
+from . import getMultipleName

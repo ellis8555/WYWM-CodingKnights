@@ -1,1 +1,1 @@
-from .validations import nameMultiple
+from .userInput import getMultipleName

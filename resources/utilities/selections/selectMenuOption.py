@@ -1,6 +1,6 @@
 from resources.utilities.create import createKnight
+from resources.utilities.display import displayKnights
 from resources.validations import numericWithRange
-from ..display import displayKnights
 
 
 # method that checks for valid number and also falls within menus option range
@@ -25,4 +25,3 @@ def selectMenuOption(input_option: str, item_count: int):
         print("Be sure to enter a corresponding menu item number. Try again.")
         return_conditions["valid_input"] = False
         return return_conditions
-

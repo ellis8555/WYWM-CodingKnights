@@ -4,8 +4,7 @@ from resources.validations import numericWithRange
 
 # method that checks for valid number and also falls within menus option range
 
-# string, integer
-def selectMenuOption(input_option, item_count):
+def selectMenuOption(input_option: str, item_count: int):
     # test user input is valid
     validate_user_input = numericWithRange.numeric_with_range(
         input_option, item_count)

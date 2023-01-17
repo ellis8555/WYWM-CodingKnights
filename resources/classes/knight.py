@@ -12,8 +12,10 @@ class Knight:
 
     # master list of knights names. This list will include duplicates
     list_of_knights_names = []
+
     # this list will detect for duplicate names
     list_of_duplicate_names = []
+
     # dictionary of knight objects with knights id as the key
     dict_of_knight_objects = {}
 

@@ -4,12 +4,16 @@ from resources.utilities.selections import selectMenuOption as smo
 
 
 def run():
-    # display option menu. returns how many menu options there are. dm alias import
+
+    # display option menu and returns how many menu options there are. dm alias import
     how_many_menu_items = dm.displayMenu()
+
     # get user selection.
     user_selection = input("Enter a selection..")
+
     # validate user input is within range of menu item count. smo is alias import
     isValid = smo.selectMenuOption(user_selection, how_many_menu_items)
+
     # if user enters an invalid selection try again
     while not isValid:
         dm.displayMenu()

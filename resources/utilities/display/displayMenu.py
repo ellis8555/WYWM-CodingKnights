@@ -1,5 +1,5 @@
 # tuple of menu items to be displayed via iterator
-menu_items = ("1. Create a knight", "2. Display knights")
+menu_items = ("1. Create a knight", "2. Display all knights", "3. Remove a knight", "0. Quit")
 
 
 def displayMenu():

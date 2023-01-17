@@ -1,6 +1,7 @@
 from resources.classes import knight
 from ..create import createKnight
 from resources import app
+from ..misc import zeroKnightsSelected
 
 
 def displayKnights():
@@ -16,15 +17,7 @@ def displayKnights():
             display_count += 1
         print("-" * 55)
     else:
-        print("There currently are no knights that have been created")
-
-        # get if user would like to create a knight
-        choice = input("Would you like to create a knight now?\n 'y' or 'n'")
-        if choice == "y":
-            createKnight.create_a_knight()
-        else:
-            print("Ok, but you have zero knights created")
-            app.run()
+        zeroKnightsSelected.zero_knights_created()
 
 
 

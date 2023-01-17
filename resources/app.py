@@ -3,6 +3,7 @@ from resources.utilities.selections import selectMenuOption as smo
 
 
 def run():
+
     # display option menu and returns how many menu options there are. dm alias import
     how_many_menu_items = dm.displayMenu()
 

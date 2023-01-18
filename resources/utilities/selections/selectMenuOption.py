@@ -23,7 +23,7 @@ def selectMenuOption(input_option: str, item_count: int):
         elif input_option == "3":
             displaySingleKnight.display_single_knight(Knight.dict_of_knight_objects)
         elif input_option == "4":
-            deleteKnight.delete_a_knight()
+            deleteKnight.delete_a_knight(Knight.dict_of_knight_objects)
         elif input_option == "0":
             return_conditions["exit_program"] = True
         return return_conditions

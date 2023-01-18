@@ -1,9 +1,8 @@
 from resources.validations import numeric_without_zero_range
 
 
-def print_from_multiple_objects(items_list, objects_container, displayed_messages: dict):
-
-    # create a dict that will hold knights list number to id
+def delete_from_multiple_objects(items_list, objects_container, displayed_messages: dict):
+    # create a dict that will hold knights id to list number for
     # the user to select
     users_created_selection_options = {}
 
@@ -38,14 +37,17 @@ def print_from_multiple_objects(items_list, objects_container, displayed_message
 
     if isValid:
 
-        # get the objects id that is to be printed
+        # get the objects id that is to be deleted
         objects_id = users_created_selection_options[user_selection]
 
         # get the object
         this_object = objects_container[objects_id]
 
-        # display the object
-        print(this_object)
+        # alert user object has been removed
+        print(f"A moment of silence for {this_object.get_name()}. {this_object.get_name()} will be missed greatly!")
+
+        # delete the object
+        del objects_container[objects_id]
 
     else:
         #############

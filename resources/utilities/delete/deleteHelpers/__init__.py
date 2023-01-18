@@ -1,0 +1,2 @@
+from . removeKnightsObject import remove_knights_object
+from . delete_from_mulitple_objects import delete_from_multiple_objects

@@ -1,7 +1,7 @@
 from resources.classes.knight import Knight
 from resources.utilities.display.displayHelpers.print_from_multiple_objects import print_from_multiple_objects
 from resources.utilities.display.displaySetOfNames import display_set_of_names
-from resources.utilities.misc import zeroKnightsSelected, objects_count
+from resources.utilities.misc import zeroKnightsSelected, objects_count as oc
 from resources.utilities.misc.booleans import is_name_duplicate
 from resources.utilities.selections.mulitplesObjectsReturned import multiplesReturned
 from resources.utilities.selections.singleObjectReturned import singleObjectReturned
@@ -10,7 +10,7 @@ from resources.utilities.selections.singleObjectReturned import singleObjectRetu
 def display_single_knight(objects_container):
 
     # get count of how many knights have been created
-    knight_count = objects_count.objects_counts(objects_container)
+    knight_count = oc.objects_counts(objects_container)
 
     # if at least one knight exists then display knights
     if knight_count > 0:
@@ -47,7 +47,7 @@ def display_single_knight(objects_container):
                 "MESSAGE_3": "Appie J and Caroline!",
             }
 
-            print_from_multiple_objects(knights, message_inputs)
+            print_from_multiple_objects(knights, objects_container, message_inputs)
 
         # else user selection is a name that's unique
         else:

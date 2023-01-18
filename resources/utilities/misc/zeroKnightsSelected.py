@@ -12,4 +12,3 @@ def zero_knights_created():
         createKnight.create_a_knight()
     else:
         print("Ok, but you have zero knights created")
-        app.run()

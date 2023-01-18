@@ -1,16 +1,16 @@
 from resources.classes.knight import Knight
-from resources.userInput.createMultipleName import createMultipleName
-from resources.utilities.misc import zeroKnightsSelected
-from resources.utilities.misc.check_if_name_exists import check_if_name_exists
+from resources.utilities.display.displayHelpers.print_mulitple_objects import print_multiple_objects
+from resources.utilities.display.displaySetOfNames import display_set_of_names
+from resources.utilities.misc import zeroKnightsSelected, objects_count
+from resources.utilities.misc.booleans import is_name_duplicate
 from resources.utilities.selections.mulitplesObjectsReturned import multiplesReturned
+from resources.utilities.selections.singleObjectReturned import singleObjectReturned
 
 
-def display_single_knight():
-    # get Knights class dictionary of knight objects
-    knights = Knight.dict_of_knight_objects
+def display_single_knight(objects_container):
 
-    # get a count of how many knights have been created
-    knight_count = len(knights)
+    # get count of how many knights have been created
+    knight_count = objects_count.objects_counts(objects_container)
 
     # if at least one knight exists then display knights
     if knight_count > 0:
@@ -20,54 +20,44 @@ def display_single_knight():
 
         # create a set of names for the user to choose from. duplicates are not
         # necessary to display
-        knight_names = set(Knight.list_of_knights_names)
+        knight_names_list = Knight.list_of_knights_names
 
-        # display the set of names
-        for name in knight_names:
-            print("- " + name)
+        # display list of options, return users selection
+        usersChoice = display_set_of_names(knight_names_list)
 
-        # get users selection and put into variable
-        usersChoice = createMultipleName()
+        # check if name is a duplicate
+        is_user_choice_a_duplicate = is_name_duplicate.searchForDuplicates(usersChoice, knight_names_list)
 
-        # check if users choice is a name that a knight has
-        does_name_exist = check_if_name_exists(usersChoice, knight_names)
-
-        # if user input name hasn't been created previously
-        # get the user to enter another name
-        while not does_name_exist:
-            print("\nThat name does not appear to be from the list displayed..")
-            print("Try again\n")
-            usersChoice = createMultipleName()
-            does_name_exist = check_if_name_exists(usersChoice, knight_names)
-
-        # initialize a list that matching knight objects will be appended to
-        knights_list = []
-
-        # filter through knights objects and find matching objects with name match
-        # from users input choice
-        for knights_id, knights_object in knights.items():
-            knights_name = knights_object.get_name()
-            if knights_name == usersChoice:
-                knights_list.append(knights_object)
-
-        # get count of object to see if user selected a name
-        # that returns multiple results
-        selected_knights_count = len(knights_list)
-
-        # if some knights share the same name
-        if selected_knights_count > 1:
+        # if user selection is a name multiple knights share
+        if is_user_choice_a_duplicate:
 
             # method handles if name returned multiple knights
-            multiplesReturned(selected_knights_count, knights_list)
+            knights = multiplesReturned(usersChoice, objects_container)
 
-        # else only a single knight has that name
+            # custom message displays depending on inputs
+            # this dictionary is submitted as an argument in following method
+            message_inputs = {
+                # first message that will be displayed
+                "number_of_dashes_message_1": 30,
+                "MESSAGE_1": "Multiple knights share that name",
+                # second message that will be displayed
+                "MESSAGE_2": "\nSelect which knight you are referring to..\n",
+                "number_of_dashes_message_3": 36,
+                # third message that will be displayed
+                "MESSAGE_3": "Your selected knight",
+                # fourth message that will be displayed
+                "MESSAGE_4": "Appie J and Caroline!",
+            }
+
+            print_multiple_objects(knights, message_inputs)
+
+        # else user selection is a name that's unique
         else:
-            selected_knight = knights_list[0]
-            selected_knight_name = selected_knight.get_name()
-            selected_knight_id = selected_knight.get_id()
-            print(f"name: {selected_knight_name} - id: {selected_knight_id}")
 
-        # end dividing dash line
-        print("-" * 92)
+            # print knights object
+            knight = singleObjectReturned(usersChoice, objects_container)
+            print(knight)
+
+    # if no knights have been created
     else:
         zeroKnightsSelected.zero_knights_created()

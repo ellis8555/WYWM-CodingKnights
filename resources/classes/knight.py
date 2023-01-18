@@ -51,4 +51,4 @@ class Knight:
 #####################
 
     def __str__(self):
-        return f"{self.get_name()}"
+        return f"{'-' * 36}Your selected knight{'-' * 36}\nName: {self.get_name()}\nID: {self.get_id()}\n{'-' * 92}"

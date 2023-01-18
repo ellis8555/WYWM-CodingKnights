@@ -1,3 +1,4 @@
+from resources.classes.knight import Knight
 from resources.utilities.create import createKnight
 from resources.utilities.delete import deleteKnight
 from resources.utilities.display import displayKnights, displaySingleKnight
@@ -20,7 +21,7 @@ def selectMenuOption(input_option: str, item_count: int):
         elif input_option == "2":
             displayKnights.displayKnights()
         elif input_option == "3":
-            displaySingleKnight.display_single_knight()
+            displaySingleKnight.display_single_knight(Knight.dict_of_knight_objects)
         elif input_option == "4":
             deleteKnight.delete_a_knight()
         elif input_option == "0":

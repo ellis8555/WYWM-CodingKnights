@@ -13,9 +13,6 @@ class Knight:
     # master list of knights names. This list will include duplicates
     list_of_knights_names = []
 
-    # this list will detect for duplicate names
-    list_of_duplicate_names = []
-
     # dictionary of knight objects with knights id as the key
     dict_of_knight_objects = {}
 
@@ -28,14 +25,6 @@ class Knight:
         self.__name = name
         # assign objects id to knights id
         self.__id = id(self)
-        # check if knights name already exists in list
-        temp_num = search.searchForDuplicates(
-            name, Knight.list_of_knights_names)
-        # if knights name is in the list then this name has a duplicate
-        if temp_num > 0:
-            Knight.list_of_duplicate_names.append(name)
-        # del the variable that was used in counting how many names there are in the list of nights
-        del temp_num
         # add knights list to master list of names. This list includes duplicates
         Knight.list_of_knights_names.append(name)
         # add knights object to dictionary with the id as the key

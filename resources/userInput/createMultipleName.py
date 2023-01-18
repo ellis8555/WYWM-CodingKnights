@@ -5,7 +5,7 @@ from ..validations import threeNames
 
 def createMultipleName():
     """
-    method that accepts at most one of [.-], max of three spaces, allowing a name such as "Jean-Claude Van Damme" or
+    method that returns at most one of [.-], max of three spaces, allowing a name such as "Jean-Claude Van Damme" or
     "Dr. Ho"
     """
     name = str(input("Enter a name: "))
@@ -15,5 +15,5 @@ def createMultipleName():
     if isValidName:
         return name
     else:
-        print("Three names max. Single '.' and '-' can be used as well.")
+        print("Three names max. No Numbers Single '.' and '-' can be used as well.")
         return createMultipleName()

@@ -5,7 +5,7 @@ from resources.utilities.misc.check_if_name_exists import check_if_name_exists
 from resources.utilities.selections.mulitplesObjectsReturned import multiplesReturned
 
 
-def display_single_knight():
+def get_a_single_knight():
     # get Knights class dictionary of knight objects
     knights = Knight.dict_of_knight_objects
 
@@ -29,7 +29,7 @@ def display_single_knight():
         # get users selection and put into variable
         usersChoice = createMultipleName()
 
-        # check if users choice is a name that a knight has
+        # check if users choice is a name that has been used
         does_name_exist = check_if_name_exists(usersChoice, knight_names)
 
         # if user input name hasn't been created previously
@@ -62,12 +62,9 @@ def display_single_knight():
 
         # else only a single knight has that name
         else:
-            selected_knight = knights_list[0]
-            selected_knight_name = selected_knight.get_name()
-            selected_knight_id = selected_knight.get_id()
-            print(f"name: {selected_knight_name} - id: {selected_knight_id}")
 
-        # end dividing dash line
+            return knights_list[0]
+
         print("-" * 92)
     else:
         zeroKnightsSelected.zero_knights_created()

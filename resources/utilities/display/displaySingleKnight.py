@@ -1,5 +1,5 @@
 from resources.classes.knight import Knight
-from resources.utilities.display.displayHelpers.print_mulitple_objects import print_multiple_objects
+from resources.utilities.display.displayHelpers.print_from_multiple_objects import print_from_multiple_objects
 from resources.utilities.display.displaySetOfNames import display_set_of_names
 from resources.utilities.misc import zeroKnightsSelected, objects_count
 from resources.utilities.misc.booleans import is_name_duplicate
@@ -43,13 +43,11 @@ def display_single_knight(objects_container):
                 # second message that will be displayed
                 "MESSAGE_2": "\nSelect which knight you are referring to..\n",
                 "number_of_dashes_message_3": 36,
-                # third message that will be displayed
-                "MESSAGE_3": "Your selected knight",
                 # fourth message that will be displayed
-                "MESSAGE_4": "Appie J and Caroline!",
+                "MESSAGE_3": "Appie J and Caroline!",
             }
 
-            print_multiple_objects(knights, message_inputs)
+            print_from_multiple_objects(knights, message_inputs)
 
         # else user selection is a name that's unique
         else:

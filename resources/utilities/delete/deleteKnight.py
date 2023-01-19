@@ -60,6 +60,7 @@ def delete_a_knight(objects_container):
 
             # del knights object
             remove_knights_object(knight, objects_container)
+            Knight.list_of_knights_names.remove(usersChoice)
 
     # if no knights have been created
     else:

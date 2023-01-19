@@ -1,7 +1,8 @@
+from abc import ABC, abstractmethod
 from datetime import datetime
 
 
-class Knight:
+class Knight(ABC):
     """
     notes to be added
     """
@@ -82,10 +83,16 @@ class Knight:
     # utilities
     #####################
 
+    @property
+    @abstractmethod
+    def get_class_type(self):
+        pass
+
+    @property
+    @abstractmethod
+    def get_formatted_type(self):
+        pass
+
+    @abstractmethod
     def __str__(self):
-        return f"{'-' * 36}Your selected knight{'-' * 36}" \
-               f"\nName: {self.get_name()}" \
-               f"\nID: {self.get_id()}" \
-               f"\nBirth time: {self.get_birthday()}" \
-               f"\nAge: {self.get_age()}" \
-               f"\n{'-' * 92}"
+        pass

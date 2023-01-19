@@ -1,6 +1,5 @@
-from resources import app
+from ...classes import python_knight
 from ...userInput import createMultipleName as gmn
-from ...classes import knight
 
 
 def create_a_knight():
@@ -9,4 +8,5 @@ def create_a_knight():
     knights_name = gmn.createMultipleName()
 
     # create a new knight instance of knight class
-    knight.Knight(knights_name)
+    # knight.Knight(knights_name)
+    python_knight.PythonKnight(knights_name)

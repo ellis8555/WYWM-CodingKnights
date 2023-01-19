@@ -43,8 +43,6 @@ def display_single_knight(objects_container):
                 # second message that will be displayed
                 "MESSAGE_2": "\nSelect which knight you are referring to..\n",
                 "number_of_dashes_message_3": 36,
-                # fourth message that will be displayed
-                "MESSAGE_3": "Appie J and Caroline!",
             }
 
             print_from_multiple_objects(knights, objects_container, message_inputs)

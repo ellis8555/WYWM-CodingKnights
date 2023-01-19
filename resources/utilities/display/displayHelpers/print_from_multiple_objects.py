@@ -36,19 +36,24 @@ def print_from_multiple_objects(items_list, objects_container, displayed_message
     # validate user can only select from displayed option numbers
     isValid = numeric_without_zero_range(user_selection, selected_objects_count)
 
-    if isValid:
+    # if user enters in an invalid option prompt user to try again
+    while not isValid:
+        # display invalid entry message
+        print("It seems your selection is a displayed option. Try again.")
 
-        # get the objects id that is to be printed
-        objects_id = users_created_selection_options[user_selection]
+        # get users selection from displayed list
+        user_selection = input("\nEnter your selection number..")
 
-        # get the object
-        this_object = objects_container[objects_id]
+        # validate user can only select from displayed option numbers
+        isValid = numeric_without_zero_range(user_selection, selected_objects_count)
 
-        # display the object
-        print(this_object)
+    # get the objects id that is to be printed
+    objects_id = users_created_selection_options[user_selection]
 
-    else:
-        #############
-        # MESSAGE_3
-        #############
-        print(displayed_messages["MESSAGE_3"])
+    # get the object
+    this_object = objects_container[objects_id]
+
+    # display the object
+    print(this_object)
+
+

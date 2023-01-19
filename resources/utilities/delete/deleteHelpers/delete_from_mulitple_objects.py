@@ -35,22 +35,24 @@ def delete_from_multiple_objects(items_list, objects_container, displayed_messag
     # validate user can only select from displayed option numbers
     isValid = numeric_without_zero_range(user_selection, selected_objects_count)
 
-    if isValid:
+    while not isValid:
+        # display invalid entry message
+        print("It seems your selection is a displayed option. Try again.")
 
-        # get the objects id that is to be deleted
-        objects_id = users_created_selection_options[user_selection]
+        # get users selection from displayed list
+        user_selection = input("\nEnter your selection number..")
 
-        # get the object
-        this_object = objects_container[objects_id]
+        # validate user can only select from displayed option numbers
+        isValid = numeric_without_zero_range(user_selection, selected_objects_count)
 
-        # alert user object has been removed
-        print(f"A moment of silence for {this_object.get_name()}. {this_object.get_name()} will be missed greatly!")
+    # get the objects id that is to be deleted
+    objects_id = users_created_selection_options[user_selection]
 
-        # delete the object
-        del objects_container[objects_id]
+    # get the object
+    this_object = objects_container[objects_id]
 
-    else:
-        #############
-        # MESSAGE_3
-        #############
-        print(displayed_messages["MESSAGE_3"])
+    # alert user object has been removed
+    print(f"A moment of silence for {this_object.get_name()}. {this_object.get_name()} will be missed greatly!")
+
+    # delete the object
+    del objects_container[objects_id]

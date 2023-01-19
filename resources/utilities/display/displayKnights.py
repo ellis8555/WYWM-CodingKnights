@@ -12,13 +12,13 @@ def displayKnights():
             print(f"{'-' * 36}Your selected knight{'-' * 36}")
             display_count = 1
             for _knight in knight.Knight.dict_of_knight_objects.values():
-                print(f"{display_count}: {_knight.get_name()}")
+                print(f"{display_count}. Name: {_knight.get_name()}, Type: {_knight.get_formatted_type()}")
                 display_count += 1
         else:
             print(f"{'-' * 36}Your selected knights{'-' * 36}")
             display_count = 1
             for _knight in knight.Knight.dict_of_knight_objects.values():
-                print(f"{display_count}: {_knight.get_name()}")
+                print(f"{display_count}. Name: {_knight.get_name()}, Type: {_knight.get_formatted_type()}")
                 display_count += 1
         print("-" * 92)
     else:

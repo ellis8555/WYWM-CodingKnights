@@ -52,7 +52,7 @@ def delete_from_multiple_objects(items_list, objects_container, displayed_messag
     this_object = objects_container[objects_id]
 
     # alert user object has been removed
-    print(f"A moment of silence for {this_object.get_name()}. {this_object.get_name()} will be missed greatly!")
+    print(f"\nA moment of silence for {this_object.get_name()}. {this_object.get_name()} will be missed greatly!")
 
     # delete the object
     del objects_container[objects_id]

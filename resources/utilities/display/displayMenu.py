@@ -4,6 +4,7 @@ menu_items = ("1. Create a knight", "2. Display all knights", "3. Display a knig
 
 def displayMenu():
     # display menu items
+    print()
     for item in menu_items:
         print(item)
     # return length of menu to be used as max user entry for menu selection

@@ -56,7 +56,7 @@ def delete_a_knight(objects_container):
             knight = singleObjectReturned(usersChoice, objects_container)
 
             # alert user object has been removed
-            print(f"A moment of silence for {knight.get_name()}. {knight.get_name()} will be missed greatly!")
+            print(f"\nA moment of silence for {knight.get_name()}. {knight.get_name()} will be missed greatly!")
 
             # del knights object
             remove_knights_object(knight, objects_container)

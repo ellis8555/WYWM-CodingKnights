@@ -35,7 +35,7 @@ def update_from_multiple_objects(items_list, objects_container, displayed_messag
         count += 1
 
     # get users selection from displayed list
-    user_selection = input("\nEnter your selection number..")
+    user_selection = input("\nEnter your selection..")
 
     # validate user can only select from displayed option numbers
     isValid = numeric_without_zero_range(user_selection, selected_objects_count)
@@ -45,7 +45,7 @@ def update_from_multiple_objects(items_list, objects_container, displayed_messag
         print("It seems your selection is a displayed option. Try again.")
 
         # get users selection from displayed list
-        user_selection = input("\nEnter your selection number..")
+        user_selection = input("\nEnter your selection..")
 
         # validate user can only select from displayed option numbers
         isValid = numeric_without_zero_range(user_selection, selected_objects_count)

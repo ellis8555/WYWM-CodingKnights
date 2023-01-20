@@ -51,6 +51,7 @@ def update_a_Knight(objects_container):
             }
 
             # get users input as to the new name user wants to assign
+            print("\nEnter a new name..")
             knights_new_name = createMultipleName()
 
             # set knights new name
@@ -73,6 +74,7 @@ def update_a_Knight(objects_container):
             previous_Knights_name = knight.get_name()
 
             # get users input as to the new name user wants to assign
+            print("\nEnter a new name..")
             knights_new_name = createMultipleName()
 
             # update knights object

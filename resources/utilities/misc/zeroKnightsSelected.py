@@ -15,4 +15,4 @@ def zero_knights_created():
     if choice == "y":
         createKnight.create_a_knight()
     else:
-        print("Ok, but you have zero knights created")
+        print("\nOk, but you have zero knights created")

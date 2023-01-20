@@ -11,7 +11,7 @@ def run():
     how_many_menu_items = dm.displayMenu()
 
     # get user selection.
-    user_selection = input("Enter a selection..")
+    user_selection = input("\nEnter a selection..")
 
     # dict returned with two conditional bools. 1 valid input 2. program exit or not
     # smo is alias import

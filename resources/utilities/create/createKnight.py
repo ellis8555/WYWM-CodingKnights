@@ -9,7 +9,7 @@ def create_a_knight():
     sub methods here also validate user input
     """
 
-    print("What type of knight would you like to create?\n"
+    print("\nWhat type of knight would you like to create?\n"
           "1. Java\n"
           "2. Python\n")
 

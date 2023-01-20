@@ -1,5 +1,5 @@
 from resources.classes import knight
-from ..misc import zeroKnightsSelected
+from resources.utilities.misc import zeroKnightsSelected
 
 
 def displayKnights():

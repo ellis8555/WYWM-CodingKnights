@@ -2,6 +2,9 @@ from resources.validations import numeric_without_zero_range
 
 
 def print_from_multiple_objects(items_list, objects_container, displayed_messages: dict):
+    """
+    method that deals with displaying a knight by name when multiple knights share the same name
+    """
 
     # create a dict that will hold knights list number to id
     # the user to select

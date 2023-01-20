@@ -1,4 +1,8 @@
 def filter_container(search_item: str, container: dict):
+    """
+    method that filters out knights not matching users input and returns a list of matching
+    names that the user input
+    """
     # initialize a list that matching knight objects will be appended to
     holding_container = []
 

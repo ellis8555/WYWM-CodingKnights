@@ -3,6 +3,9 @@ from ..misc import zeroKnightsSelected
 
 
 def displayKnights():
+    """
+    method displays all knights by name and what type of knight class they belong to
+    """
     # get a count of how many knights have been created
     knight_count = len(knight.Knight.dict_of_knight_objects)
 

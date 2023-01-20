@@ -4,6 +4,10 @@ from ...validations import numericWithoutZeroRange as nonZero
 
 
 def create_a_knight():
+    """
+    method that takes in user input and creates the appropriate type of class object
+    sub methods here also validate user input
+    """
 
     print("What type of knight would you like to create?\n"
           "1. Java\n"

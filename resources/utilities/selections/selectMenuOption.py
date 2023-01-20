@@ -9,6 +9,9 @@ from resources.validations import numericWithRange
 # method that checks for valid number and also falls within menus option range
 
 def selectMenuOption(input_option: str, item_count: int):
+    """
+    method that displays the main options menu
+    """
     # object containing dual return values
     return_conditions = {"valid_input": True,
                          "exit_program": False,

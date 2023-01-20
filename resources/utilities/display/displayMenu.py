@@ -4,6 +4,9 @@ menu_items = ("1. Create a knight", "2. Display all knights", "3. Display a knig
 
 
 def displayMenu():
+    """
+    method that plays a role in displaying the programs main menu from the list above
+    """
     # display menu items
     print()
     for item in menu_items:

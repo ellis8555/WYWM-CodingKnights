@@ -2,6 +2,9 @@ from resources.validations import numeric_without_zero_range
 
 
 def delete_from_multiple_objects(items_list, objects_container, displayed_messages: dict):
+    """
+    method that deals with removing a knight by name when multiple knights share the same name
+    """
     # create a dict that will hold knights id to list number for
     # the user to select
     users_created_selection_options = {}

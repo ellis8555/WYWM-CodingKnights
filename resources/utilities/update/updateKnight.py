@@ -9,6 +9,10 @@ from resources.utilities.update.updateHelpers import updateFromMultipleKnightsOb
 
 
 def update_a_Knight(objects_container):
+    """
+    method that narrows down entire master objects list into a single object
+    where that objects name will be changed
+    """
 
     # get count of how many knights have been created
     knight_count = oc.objects_counts(objects_container)

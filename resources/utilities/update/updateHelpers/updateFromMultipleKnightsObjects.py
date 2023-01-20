@@ -2,6 +2,11 @@ from resources.validations import numeric_without_zero_range
 
 
 def update_from_multiple_objects(items_list, objects_container, displayed_messages: dict, knights_new_name: str):
+    """
+    method that helps in updating an objects name. when users input request results in
+    a result that returns duplicates this method narrows down the duplicates into a single
+    object in which the name can be updated
+    """
     # create a dict that will hold knights id to list number for
     # the user to select
     users_created_selection_options = {}

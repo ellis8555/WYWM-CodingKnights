@@ -3,6 +3,9 @@ from resources.utilities.selections import selectMenuOption as smo
 
 
 def run():
+    """
+    method that is run from within main.py and returns if the user wants to end the program
+    """
 
     # display option menu and returns how many menu options there are. dm alias import
     how_many_menu_items = dm.displayMenu()

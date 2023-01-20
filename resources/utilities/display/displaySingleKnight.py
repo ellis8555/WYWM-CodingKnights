@@ -8,6 +8,9 @@ from resources.utilities.selections.singleObjectReturned import singleObjectRetu
 
 
 def display_single_knight(objects_container):
+    """
+    method that fetches a single knights object and prints that knights attributes for the user
+    """
 
     # get count of how many knights have been created
     knight_count = oc.objects_counts(objects_container)

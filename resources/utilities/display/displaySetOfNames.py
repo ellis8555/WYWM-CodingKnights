@@ -3,6 +3,9 @@ from resources.utilities.misc.booleans.check_if_name_exists import check_if_name
 
 
 def display_set_of_names(list_of_names: list):
+    """
+    method that removes duplicates from master names list and produces a set to be displayed
+    """
 
     knight_names_set = set(list_of_names)
 

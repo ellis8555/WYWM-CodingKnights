@@ -9,6 +9,10 @@ from resources.utilities.selections.singleObjectReturned import singleObjectRetu
 
 
 def delete_a_knight(objects_container):
+    """
+    method that ends up removing a knights object completely
+    also removes knights name from a master list of names
+    """
 
     # get count of how many knights have been created
     knight_count = oc.objects_counts(objects_container)

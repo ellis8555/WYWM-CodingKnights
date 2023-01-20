@@ -2,8 +2,8 @@ from resources.classes.knight import Knight
 from resources.utilities.delete.deleteHelpers import delete_from_multiple_objects
 from resources.utilities.delete.deleteHelpers.removeKnightsObject import remove_knights_object
 from resources.utilities.display.displaySetOfNames import display_set_of_names
-from resources.utilities.misc import objects_count as oc, zeroKnightsSelected
-from resources.utilities.misc.booleans import is_name_duplicate
+from resources.utilities.misc import objectsCount as oc, zeroKnightsSelected
+from resources.utilities.misc.booleans import isNameDuplicate
 from resources.utilities.selections.mulitplesObjectsReturned import multiplesReturned
 from resources.utilities.selections.singleObjectReturned import singleObjectReturned
 
@@ -31,7 +31,7 @@ def delete_a_knight(objects_container):
         usersChoice = display_set_of_names(knight_names_list)
 
         # check if name is a duplicate
-        is_user_choice_a_duplicate = is_name_duplicate.searchForDuplicates(usersChoice, knight_names_list)
+        is_user_choice_a_duplicate = isNameDuplicate.searchForDuplicates(usersChoice, knight_names_list)
 
         # if user selection is a name multiple knights share
         if is_user_choice_a_duplicate:

@@ -1,5 +1,5 @@
 from resources.userInput.createMultipleName import createMultipleName
-from resources.utilities.misc.booleans.check_if_name_exists import check_if_name_exists
+from resources.utilities.misc.booleans.checkIfNameExists import check_if_name_exists
 
 
 def display_set_of_names(list_of_names: list):

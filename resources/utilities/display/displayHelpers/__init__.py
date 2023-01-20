@@ -1,1 +1,1 @@
-from . import print_from_multiple_objects
+from . import printFromMultipleObjects

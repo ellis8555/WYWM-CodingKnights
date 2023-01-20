@@ -1,4 +1,4 @@
-from resources.utilities.misc import filter_container as fc
+from resources.utilities.misc import filterContainer as fc
 
 
 def singleObjectReturned(user_input: str, storage_container):

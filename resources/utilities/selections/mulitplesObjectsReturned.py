@@ -1,4 +1,4 @@
-from resources.utilities.misc import filter_container as fc
+from resources.utilities.misc import filterContainer as fc
 
 
 def multiplesReturned(user_input: str, objects_container):

@@ -1,8 +1,8 @@
 from resources.classes.knight import Knight
-from resources.utilities.display.displayHelpers.print_from_multiple_objects import print_from_multiple_objects
+from resources.utilities.display.displayHelpers.printFromMultipleObjects import print_from_multiple_objects
 from resources.utilities.display.displaySetOfNames import display_set_of_names
-from resources.utilities.misc import zeroKnightsSelected, objects_count as oc
-from resources.utilities.misc.booleans import is_name_duplicate
+from resources.utilities.misc import zeroKnightsSelected, objectsCount as oc
+from resources.utilities.misc.booleans import isNameDuplicate
 from resources.utilities.selections.mulitplesObjectsReturned import multiplesReturned
 from resources.utilities.selections.singleObjectReturned import singleObjectReturned
 
@@ -29,7 +29,7 @@ def display_single_knight(objects_container):
         usersChoice = display_set_of_names(knight_names_list)
 
         # check if name is a duplicate
-        is_user_choice_a_duplicate = is_name_duplicate.searchForDuplicates(usersChoice, knight_names_list)
+        is_user_choice_a_duplicate = isNameDuplicate.searchForDuplicates(usersChoice, knight_names_list)
 
         # if user selection is a name multiple knights share
         if is_user_choice_a_duplicate:

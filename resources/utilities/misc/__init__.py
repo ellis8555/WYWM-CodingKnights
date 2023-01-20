@@ -1,3 +1,7 @@
 from . import zeroKnightsSelected
-from . import check_if_name_exists
-from . import getSingleKnightByName
+from .booleans import isNameDuplicate, checkIfNameExists
+from . import getSingleNameExists
+from . import getMultipleNameInstances
+from . import filterContainer
+from . import objectsCount
+from . import updateKnightsListOfNames

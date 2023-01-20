@@ -3,12 +3,15 @@ from resources.utilities.selections import selectMenuOption as smo
 
 
 def run():
+    """
+    method that is run from within main.py and returns if the user wants to end the program
+    """
 
     # display option menu and returns how many menu options there are. dm alias import
     how_many_menu_items = dm.displayMenu()
 
     # get user selection.
-    user_selection = input("Enter a selection..")
+    user_selection = input("\nEnter a selection..")
 
     # dict returned with two conditional bools. 1 valid input 2. program exit or not
     # smo is alias import

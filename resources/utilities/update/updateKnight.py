@@ -1,17 +1,17 @@
 from resources.classes.knight import Knight
-from resources.utilities.delete.deleteHelpers import delete_from_multiple_objects
-from resources.utilities.delete.deleteHelpers.removeKnightsObject import remove_knights_object
+from resources.userInput.createMultipleName import createMultipleName
 from resources.utilities.display.displaySetOfNames import display_set_of_names
-from resources.utilities.misc import objectsCount as oc, zeroKnightsSelected
+from resources.utilities.misc import objectsCount as oc, zeroKnightsSelected, updateKnightsListOfNames
 from resources.utilities.misc.booleans import isNameDuplicate
 from resources.utilities.selections.mulitplesObjectsReturned import multiplesReturned
 from resources.utilities.selections.singleObjectReturned import singleObjectReturned
+from resources.utilities.update.updateHelpers import updateFromMultipleKnightsObjects
 
 
-def delete_a_knight(objects_container):
+def update_a_Knight(objects_container):
     """
-    method that ends up removing a knights object completely
-    also removes knights name from a master list of names
+    method that narrows down entire master objects list into a single object
+    where that objects name will be changed
     """
 
     # get count of how many knights have been created
@@ -21,7 +21,7 @@ def delete_a_knight(objects_container):
     if knight_count > 0:
 
         # display menu option message
-        print("-" * 20 + "Type the name of which knight who you will be removing?" + "-" * 20)
+        print("-" * 20 + "Type the name of which knight who you will be updating?" + "-" * 20)
 
         # create a set of names for the user to choose from. duplicates are not
         # necessary to display
@@ -50,8 +50,19 @@ def delete_a_knight(objects_container):
                 "number_of_dashes_message_3": 36,
             }
 
-            delete_from_multiple_objects(knights, objects_container, message_inputs)
-            Knight.list_of_knights_names.remove(usersChoice)
+            # get users input as to the new name user wants to assign
+            print("\nEnter a new name..")
+            knights_new_name = createMultipleName()
+
+            # set knights new name
+            previous_Knights_name = updateFromMultipleKnightsObjects.update_from_multiple_objects(
+                knights, objects_container, message_inputs, knights_new_name)
+
+            # update the list of knights names
+            updateKnightsListOfNames.update_knights_list_of_names(previous_Knights_name, knights_new_name)
+
+            # alert user object has been removed
+            print(f"{previous_Knights_name} has been changed to {knights_new_name}")
 
         # else user selection is a name that's unique
         else:
@@ -59,12 +70,21 @@ def delete_a_knight(objects_container):
             # get knights object
             knight = singleObjectReturned(usersChoice, objects_container)
 
-            # alert user object has been removed
-            print(f"\nA moment of silence for {knight.get_name()}. {knight.get_name()} will be missed greatly!")
+            # get knights previous name for name change message
+            previous_Knights_name = knight.get_name()
 
-            # del knights object
-            remove_knights_object(knight, objects_container)
-            Knight.list_of_knights_names.remove(usersChoice)
+            # get users input as to the new name user wants to assign
+            print("\nEnter a new name..")
+            knights_new_name = createMultipleName()
+
+            # update knights object
+            knight.set_name(knights_new_name)
+
+            # update the list of knights names
+            updateKnightsListOfNames.update_knights_list_of_names(previous_Knights_name, knights_new_name)
+
+            # alert user object has been removed
+            print(f"{previous_Knights_name} has been changed to {knights_new_name}")
 
     # if no knights have been created
     else:

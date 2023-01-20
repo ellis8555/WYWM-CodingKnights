@@ -21,4 +21,5 @@ class JavaKnight(Knight):
                f"\nBirth time: {self.get_birthday()}" \
                f"\nAge: {self.get_age()}" \
                f"\nKnights type: {self.get_formatted_type()}" \
+               f"\nKnights class: {self.get_class_type()}" \
                f"\n{'-' * 92}"

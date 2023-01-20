@@ -2,6 +2,7 @@ from resources.classes.knight import Knight
 from resources.utilities.create import createKnight
 from resources.utilities.delete import deleteKnight
 from resources.utilities.display import displayKnights, displaySingleKnight
+from resources.utilities.update import updateKnight
 from resources.validations import numericWithRange
 
 
@@ -24,6 +25,8 @@ def selectMenuOption(input_option: str, item_count: int):
             displaySingleKnight.display_single_knight(Knight.dict_of_knight_objects)
         elif input_option == "4":
             deleteKnight.delete_a_knight(Knight.dict_of_knight_objects)
+        elif input_option == "5":
+            updateKnight.update_a_Knight(Knight.dict_of_knight_objects)
         elif input_option == "0":
             return_conditions["exit_program"] = True
         return return_conditions
